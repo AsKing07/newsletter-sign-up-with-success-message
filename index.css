@@ -1,0 +1,316 @@
+:root {
+  /*Primary color */
+  --tomato: hsl(4, 100%, 67%);
+
+  /*Neutral colors */
+  --DarkSlateGrey: hsl(234, 29%, 20%);
+  --CharcoalGrey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(assets/fonts/Roboto-Regular.ttf);
+}
+
+*
+{
+    font-family: "Roboto";
+}
+
+body {
+  background-color: var(--CharcoalGrey);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#emailText
+{
+    color: var(--DarkSlateGrey);
+    font-weight: bold;
+    
+}
+
+.notDisplay
+{
+    display: none !important;
+}
+
+/* SignUp Form */
+
+.signUpContainer {
+  margin: 0 auto;
+  margin-top: 10%;
+  width: 800px;
+  height: 520px;
+  background-color: var(--White);
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+/*left block */
+
+.left {
+  text-align: left;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-right: 20px;
+}
+h1
+{
+    color: var(--DarkSlateGrey);
+    font-size: 3rem;
+    font-weight: Bold;
+}
+
+ul {
+  list-style-image: url(assets/images/icon-list.svg);
+
+  margin-left: 28px;
+  padding: 0;
+  list-style-position: outside;
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+p {
+    font-size: 16px;
+    font-family: "Roboto";
+    margin: 0;
+    padding: 0;
+    color: var(--CharcoalGrey);
+    font-weight:700;
+}
+
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+input {
+  margin-bottom: 1rem;
+  margin-top: -0.1rem;
+  padding: 1rem;
+  border: solid 1px var(--Grey);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.inputError {
+  color: var(--tomato);
+  background-color: var(--tomato);
+  border: solid 1px var(--tomato);
+}
+
+button {
+  background-color: var(--DarkSlateGrey);
+  border-radius: 10px;
+  border: solid 1px var(--DarkSlateGrey);
+  padding: 1rem;
+  transition: backgroud-color 0.3s ease-in-out;
+  color: var(--White);
+}
+
+button:hover {
+  background-color: var(--tomato);
+  border: var(--tomato);
+  cursor: pointer;
+}
+
+#error {
+  display: none;
+  color: var(--tomato);
+}
+
+/* right block */
+
+.right {
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-left: 20px;
+}
+
+img {
+  /*diminuer la taille de l'image */
+  height: 500px;
+}
+
+/*Succes section */
+
+.succesMessageContainer
+{
+    
+    display: flex;
+    flex-direction: column;
+margin: 0 auto;
+  margin-top: 10%;
+  width: 350px;
+  height: 400px;
+  background-color: var(--White);
+  padding: 50px;
+  border-radius: 30px;
+  align-items: left;
+  justify-content: left;
+  text-align: left;
+}
+
+.succesMessageContainer img
+{
+    width: 60px;
+    height: 80px;
+}
+
+.succesMessageContainer p
+{
+    margin-bottom: 2rem;
+}
+
+.succesMessageContainer button
+{
+    font-size: 18px;
+}
+
+
+
+/*Footer Section */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    body {
+        background-color: var(--White);
+       padding: 0;
+       margin: 0;
+       height: 100%;
+       
+
+        
+      }
+    
+      .signUpContainer {
+       
+       
+        width: 100%;
+       height: 100%;
+         
+        background-color: var(--White);
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0;
+        padding: 0;
+        justify-content: space-between;
+      
+       
+      }
+
+      .left {
+        text-align: left;
+       
+       
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+      
+       
+       
+      }
+    
+      .right {
+        
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 50px;
+
+        
+      }
+    
+      .imgdte {
+        content: url(assets/images/illustration-sign-up-mobile.svg);
+        display: block;
+        
+       width: 100%;
+       height: auto;
+       background-size: cover;
+    
+      }
+
+      h1
+{
+   
+    font-size: 3rem;
+    margin-left: 20px;
+  
+}
+
+.desc
+{
+    margin-left: 20px;
+}
+
+
+li
+{
+    margin-bottom:30px ;
+    margin-left: 20px;
+}
+
+
+
+
+/* Success section */
+
+.succesMessageContainer
+{
+    
+  
+  margin-top: 20%;
+  height: 100%;
+  
+ 
+}
+.succesMessageContainer h1
+{
+    margin-left: 0;
+}
+
+
+.succesMessageContainer button
+{
+    font-size: 18px;
+    margin-top: 90%;
+}
+
+
+
+
+
+
+}
